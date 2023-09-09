@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       <div className="relative">
         <Hero />
       </div>

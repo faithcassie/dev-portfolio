@@ -2,24 +2,62 @@ import React from "react";
 import { motion } from "framer-motion";
 import { heroVariants, slideIn } from "../utils/motion";
 import ProjectCard from "./ProjectCard";
+import novelMan from "../assets/images/novel.png";
 
 const Projects = () => {
   return (
-    <div className="relative  my-36 py-36">
+    <div className="relative w-full h-full mt-36 mb-[400px] md:mb-[500px] pb-[100px]">
       <motion.div
         initial="hidden"
         whileInView="show"
         viewport={{ once: false }}
         variants={slideIn("left", "tween", 0.5, 1)}
-        className="bg-[#F6F6D7] w-full h-full absolute top-28 -z-10 mb-10  "
+        className="bg-[#F6F6D7] w-full h-full absolute top-28 -z-20 "
       />
-      <div id="projects" className="flex flex-col w-full mx-auto relative">
-        <h1 className="text-7xl py-20">Projects</h1>
-        <div className="flex justify-between w-full overflow-scroll overscroll-y-auto overscroll-x-contain bg-slate-200 ml-10">
-          <ProjectCard className="" />
-          <ProjectCard className="" />
-          <ProjectCard className="" />
-          <ProjectCard className="" />
+      <div
+        id="projects"
+        className="flex flex-col w-full h-full mx-auto relative py-[200px]"
+      >
+        <motion.h1
+          initial="hidden"
+          whileInView="show"
+          whileHover={{
+            scale: 1.1,
+            rotate: [0, -5, 5, 0],
+            transformOrigin: "center",
+            transition: {
+              duration: 0.8,
+            },
+          }}
+          viewport={{ once: false }}
+          variants={heroVariants(0.2)}
+          className="w-full text-5xl md:text-7xl pb-10 absolute flex justify-center"
+        >
+          Projects
+        </motion.h1>
+        <div className="flex justify-between w-full overflow-auto  overscroll-y-auto overscroll-x-none md:flex-wrap md:w-[80%] md:mx-auto pt-36">
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </div>
+        <div className="w-full h-full mx-auto flex justify-center">
+          <motion.img
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false }}
+            whileHover={{
+              scale: 1.1,
+              rotate: [0, -5, 5, 0],
+              transition: {
+                duration: 0.8,
+              },
+            }}
+            variants={slideIn("down", "spring", 0.2, 1)}
+            className="w-[90%] mx-auto md:w-[25%] absolute -bottom-[300px] md:-bottom-[400px] z-10"
+            src={novelMan}
+            alt="thinking-man"
+          />
         </div>
       </div>
     </div>

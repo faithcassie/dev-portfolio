@@ -18,6 +18,6 @@
     @apply font-[Raleway] 
   }
   button {
-    @apply px-8 py-1 border bg-[var(--btn-bg)] text-white rounded-full text-[14px] md:text-[16px] drop-shadow-sm hover:scale-105 
+    @apply px-8 py-1  bg-[var(--btn-bg)] text-white rounded-full text-[14px] md:text-[16px] drop-shadow-sm hover:scale-105 
   }
 } 

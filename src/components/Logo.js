@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Logo() {
+  const navigate = useNavigate();
   return (
-    <div className="group relative cursor-pointer">
+    <div
+      onClick={() => navigate("/")}
+      className="group relative cursor-pointer"
+    >
       <div className="uppercase text-[18px] md:text-[28px] flex items-center relative">
         {"faith".split("").map((letter, i) => (
           <div

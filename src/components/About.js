@@ -17,7 +17,7 @@ const About = () => {
         <motion.img
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           whileHover={{
             scale: 1.1,
             rotate: [0, -5, 5, 0],
@@ -25,12 +25,12 @@ const About = () => {
               duration: 0.8,
             },
           }}
-          variants={slideIn("right", "spring", 0.4, 1)}
+          variants={slideIn("left", "spring", 0.4, 1)}
           src={seaHorse}
           alt="seahorse"
-          className="absolute w-[50%] left-36 -bottom-[250px] md:-bottom-[250px]  md:left-10 lg:left-22 lg:w-[40%] lg:mt-10 lg:mr-20"
+          className="absolute w-[50%] left-36 -bottom-[250px] md:-bottom-[250px]  md:left-10 lg:left-[200px] lg:w-[30%] lg:mt-10 "
         />
-        <div className="flex flex-col absolute w-[70%] mt-10 md:right-28 md:mt-16 md:w-[40%] ">
+        <div className="flex flex-col absolute w-[70%] mt-10 md:right-[200px] md:mt-16 md:w-[40%] ">
           <motion.h1
             initial="hidden"
             whileInView="show"
@@ -43,7 +43,7 @@ const About = () => {
               },
             }}
             viewport={{ once: false }}
-            variants={heroVariants(0.2)}
+            variants={heroVariants(0.4)}
             className="w-fit text-5xl md:text-7xl pb-10"
           >
             About me
@@ -52,7 +52,7 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false }}
-            variants={heroVariants(0.3)}
+            variants={heroVariants(0.5)}
             className="w-fit text-base md:text-lg"
           >
             I started as a graphic design and UI/UX student in college. Learning
@@ -65,7 +65,7 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false }}
-            variants={heroVariants(0.4)}
+            variants={heroVariants(0.6)}
             className="w-fit pt-5 text-base "
           >
             I find happiness in crafting{" "}
