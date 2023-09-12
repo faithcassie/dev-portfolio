@@ -6,6 +6,10 @@ import linkdedLogo from "../assets/images/linkedin-icon.svg";
 import githubLogo from "../assets/images/github-icon.svg";
 
 const Hero = () => {
+  const handleOpenLink = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <div id="hero" className="relative h-[500px] pt-0 md:pt-24 ">
       <div className="h-[400px] mt-24 ">
@@ -101,10 +105,20 @@ const Hero = () => {
             variants={heroVariants(1)}
             className="flex w-fit mt-4"
           >
-            <motion.a whileHover={{ scale: 1.1 }} className="cursor-pointer">
+            <motion.a
+              onClick={() =>
+                handleOpenLink("https://www.linkedin.com/in/faithnguyentech/")
+              }
+              whileHover={{ scale: 1.1 }}
+              className="cursor-pointer"
+            >
               <img src={linkdedLogo} alt="linkdedin" className="w-5 h-5 mr-4" />
             </motion.a>
-            <motion.a whileHover={{ scale: 1.2 }} className="cursor-pointer">
+            <motion.a
+              onClick={() => handleOpenLink("https://github.com/faithcassie")}
+              whileHover={{ scale: 1.2 }}
+              className="cursor-pointer"
+            >
               <img src={githubLogo} alt="github" className="w-5 h-5" />
             </motion.a>
           </motion.div>
