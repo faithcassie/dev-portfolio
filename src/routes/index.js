@@ -1,19 +1,26 @@
+import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import HomePage from "../pages/HomePage";
+import MainLayout from "../layout/MainLayout";
+import ContactPage from "../pages/ContactPage";
 import ProjectDetail from "../pages/ProjectDetail";
-const { AnimatePresence } = require("framer-motion");
-const { useLocation, Routes, Route } = require("react-router-dom");
-const { default: MainLayout } = require("../layout/MainLayout");
-const { default: HomePage } = require("../pages/HomePage");
-const { Contact } = require("../components");
+import ResumePage from "../pages/ResumePage";
+import { AnimatePresence } from "framer-motion";
+import ProjectPage from "../pages/ProjectPage";
+import AboutPage from "../pages/AboutPage";
 
 export const Router = () => {
-  const location = useLocation;
+  const location = useLocation();
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="project/:id" element={<ProjectDetail />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="projects" element={<ProjectPage />} />
+          <Route path="projects/:id" element={<ProjectDetail />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="resume" element={<ResumePage />} />
         </Route>
       </Routes>
     </AnimatePresence>

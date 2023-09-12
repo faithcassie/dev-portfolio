@@ -1,26 +1,20 @@
 export const projects = [
   {
-    name: "prj1",
-    descriptions:
-      "Lorem ipsum dolor sit amet consectetur. Augue neque non quisque habitant turpis faucibus amet nisi nunc.",
-    tech: ["css", "html", "javascript", "reactjs"],
+    name: "musik-playerr",
+    imgUrl: "/musik-playerr.png",
+    demoLink: "https://musik-playerr.netlify.app/",
+    githubLink: "https://github.com/faithcassie/music-player-app",
+    description:
+      "The Simple Music Player App is a React.js project that leverages the useContext hook and the MusicPlayerContext to create a music playback experience. This app allows users to play, pause, skip to the previous or next track, and select specific tracks from a list.",
+    tech: ["css", "html", "javascript", "reactjs", "mui"],
   },
   {
-    name: "prj2",
-    descriptions:
-      "Lorem ipsum dolor sit amet consectetur. Augue neque non quisque habitant turpis faucibus amet nisi nunc.",
-    tech: ["css", "html", "javascript", "reactjs"],
-  },
-  {
-    name: "prj3",
-    descriptions:
-      "Lorem ipsum dolor sit amet consectetur. Augue neque non quisque habitant turpis faucibus amet nisi nunc.",
-    tech: ["css", "html", "javascript", "reactjs"],
-  },
-  {
-    name: "prj4",
-    descriptions:
-      "Lorem ipsum dolor sit amet consectetur. Augue neque non quisque habitant turpis faucibus amet nisi nunc.",
-    tech: ["css", "html", "javascript", "reactjs"],
+    name: "musik-playerr",
+    imgUrl: "/musik-playerr.png",
+    demoLink: "https://musik-playerr.netlify.app/",
+    githubLink: "https://github.com/faithcassie/music-player-app",
+    description:
+      "The Simple Music Player App is a React.js project that leverages the useContext hook and the MusicPlayerContext to create a music playback experience. This app allows users to play, pause, skip to the previous or next track, and select specific tracks from a list.",
+    tech: ["css", "html", "javascript", "reactjs", "mui"],
   },
 ];

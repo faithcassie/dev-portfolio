@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { heroVariants, slideIn } from "../utils/motion";
-import ProjectCard from "./ProjectCard";
+import { ProjectCard } from "../components/index";
 import novelMan from "../assets/images/novel.png";
-
+import { projects } from "../assets/constants/index";
 const Projects = () => {
   return (
     <div className="relative w-full h-full mt-36 mb-[400px] md:mb-[500px] pb-[100px]">
@@ -36,10 +36,9 @@ const Projects = () => {
           Projects
         </motion.h1>
         <div className="flex justify-between w-full overflow-auto  overscroll-y-auto overscroll-x-none md:flex-wrap md:w-[80%] md:mx-auto pt-36">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {projects.map((element) => (
+            <ProjectCard project={element} />
+          ))}
         </div>
         <div className="w-full h-full mx-auto flex justify-center">
           <motion.img

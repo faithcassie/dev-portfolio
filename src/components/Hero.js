@@ -3,12 +3,11 @@ import GoldFish from "../assets/images/fish.png";
 import { motion } from "framer-motion";
 import { heroVariants, slideIn } from "../utils/motion";
 import linkdedLogo from "../assets/images/linkedin-icon.svg";
-import arrowUp from "../assets/images/arrow-up-bold.svg";
 import githubLogo from "../assets/images/github-icon.svg";
 
 const Hero = () => {
   return (
-    <div className="relative h-[500px] pt-0 md:pt-24 ">
+    <div id="hero" className="relative h-[500px] pt-0 md:pt-24 ">
       <div className="h-[400px] mt-24 ">
         <motion.div
           initial="hidden"
@@ -22,17 +21,21 @@ const Hero = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false }}
-          whileHover={{
-            scale: 1.1,
+          animate={{
+            scale: [1, 1.1, 1],
             rotate: [0, -5, 5, 0],
             transition: {
-              duration: 0.8,
+              duration: 1,
+              ease: "easeInOut",
+              times: [0, 0.4, 0.7, 1],
+              repeat: Infinity,
+              repeatDelay: 3,
             },
           }}
           variants={slideIn("up", "spring", 0.2, 1)}
           src={GoldFish}
           alt="hero_image"
-          className="w-[60%] md:w-[50%] lg:w-[40%] absolute right-20 md:right-[15%] bottom-5 md:-bottom-28 "
+          className="w-[50%] md:w-[40%] lg:w-[30%] absolute right-20 md:right-[15%] bottom-5 md:-bottom-28 "
         />
         <div className="absolute left-20 md:left-[15%] -top-10 w-[80%] md:w-[50%] md:mt-[10%] ">
           <motion.h1
@@ -104,24 +107,6 @@ const Hero = () => {
             <motion.a whileHover={{ scale: 1.2 }} className="cursor-pointer">
               <img src={githubLogo} alt="github" className="w-5 h-5" />
             </motion.a>
-            {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="black"
-              strokeWidth={3}
-            >
-              <motion.path
-                // initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                // transition={{ duration: 1 }}
-                d="M5 13l4 4L19 7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg> */}
           </motion.div>
         </div>
         {/* <a className="cursor-pointer">

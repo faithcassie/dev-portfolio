@@ -11,24 +11,28 @@ const About = () => {
         whileInView="show"
         viewport={{ once: false }}
         variants={slideIn("right", "tween", 0.5, 1)}
-        className="bg-[#FFD1B8] w-full md:w-[90%] h-full absolute rounded-tl-[150px] right-0 shadow-xl"
+        className="bg-[#FFD1B8] w-full md:w-[90%] h-[90%] absolute rounded-tl-[150px] right-0 shadow-xl"
       />
       <div className=" flex w-[60%] h-[550px] mx-auto items-center pb-5">
         <motion.img
           initial="hidden"
           whileInView="show"
           viewport={{ once: false }}
-          whileHover={{
-            scale: 1.1,
+          animate={{
+            scale: [1, 1.1, 1],
             rotate: [0, -5, 5, 0],
             transition: {
-              duration: 0.8,
+              duration: 1,
+              ease: "easeInOut",
+              times: [0, 0.4, 0.7, 1],
+              repeat: Infinity,
+              repeatDelay: 3,
             },
           }}
           variants={slideIn("left", "spring", 0.4, 1)}
           src={seaHorse}
           alt="seahorse"
-          className="absolute w-[50%] left-36 -bottom-[250px] md:-bottom-[250px]  md:left-10 lg:left-[200px] lg:w-[30%] lg:mt-10 "
+          className="absolute w-[50%] left-36 -bottom-[200px] md:w-[40%] md:-bottom-[250px]  md:left-10 lg:left-[200px] lg:w-[30%] lg:mt-10 "
         />
         <div className="flex flex-col absolute w-[70%] mt-10 md:right-[200px] md:mt-16 md:w-[40%] ">
           <motion.h1
