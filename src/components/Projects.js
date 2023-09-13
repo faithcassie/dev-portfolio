@@ -52,8 +52,8 @@ const Projects = () => {
                 duration: 0.8,
               },
             }}
-            variants={slideIn("down", "spring", 0.2, 1)}
-            className="w-[90%] mx-auto md:w-[25%] absolute -bottom-[300px] md:-bottom-[400px] z-10"
+            variants={slideIn("left", "spring", 0.2, 1)}
+            className="w-[60%] mx-auto sm:w-[40%] md:w-[30%] absolute -bottom-[300px] md:-bottom-[400px] z-10"
             src={novelMan}
             alt="thinking-man"
           />

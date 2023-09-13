@@ -5,7 +5,7 @@ export const projects = [
     demoLink: "https://zing-tv.netlify.app/",
     githubLink: "https://github.com/faithcassie/zing_movie_app",
     description:
-      "Zing is a sleek web app crafted with React.js and powered by Material-UI, designed to replicate the beloved Netflix look.",
+      "Zing is a web app crafted with React.js and powered by Material-UI, designed to replicate the aesthetic of the beloved Netflix interface.",
     tech: ["javascript", "reactjs", "mui"],
   },
   {

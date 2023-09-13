@@ -17,6 +17,9 @@
   body {
     @apply font-[Raleway] 
   }
+  p {
+    @apply pb-3
+  }
   button {
     @apply px-8 py-1  bg-[var(--btn-bg)] text-white rounded-full text-[14px] md:text-[16px] drop-shadow-sm hover:scale-105 
   }

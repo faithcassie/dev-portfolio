@@ -15,10 +15,11 @@ const ProjectCard = ({ project }) => {
       variants={heroVariants(0.4)}
       className="w-fit  px-3 py-5 mx-auto"
     >
-      <div className=" w-[300px] h-auto md:w-[400px] ">
-        <img
+      <div className="pb-2">
+        <motion.img
+          whileHover={{ scale: 1.1 }}
           src={project.imgUrl}
-          className="object-contain w-full h-full shadow-lg hover:border-2 hover:border-lime-300 "
+          className="object-cover w-[280px] h-[150px] md:w-[400px] md:h-[214px] shadow-custom hover:border-2 hover:border-lime-300 "
         />
       </div>
 
@@ -42,7 +43,7 @@ const ProjectCard = ({ project }) => {
         {project.description}
       </p>
 
-      <div className="mt-3">
+      <div>
         {project.tech.map((e) => (
           <motion.div
             whileHover={{ scale: 1.1 }}
