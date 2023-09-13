@@ -13,16 +13,19 @@ const ProjectCard = ({ project }) => {
       whileInView="show"
       viewport={{ once: false }}
       variants={heroVariants(0.4)}
-      className="w-fit pl-10 pr-5 py-5 mx-auto"
+      className="w-fit  px-3 py-5 mx-auto"
     >
-      <img
-        src={project.imgUrl}
-        className="object-cover w-[300px] h-[200px] md:w-[400px] md:h-[250px] "
-      />
+      <div className=" w-[300px] h-auto md:w-[400px] ">
+        <img
+          src={project.imgUrl}
+          className="object-contain w-full h-full shadow-lg hover:border-2 hover:border-lime-300 "
+        />
+      </div>
+
       <motion.h2 whileHover={{ scale: 1.1 }} className="text-3xl pt-5 w-fit">
         {project.name}
       </motion.h2>
-      <div className="flex mt-3 lg:hidden">
+      <div className="flex mt-5 text-sm ">
         <button
           onClick={() => handleOpenLink(project.demoLink)}
           className="mr-3"
@@ -41,7 +44,7 @@ const ProjectCard = ({ project }) => {
         {project.tech.map((e) => (
           <motion.div
             whileHover={{ scale: 1.1 }}
-            className="inline-block border border-black text-black px-2 py-1 rounded-full text-sm mr-2 mt-1"
+            className="inline-block border border-black text-black px-2 py-1 rounded-full text-xs mr-2 mt-1"
           >
             {e}
           </motion.div>

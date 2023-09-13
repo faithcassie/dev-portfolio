@@ -35,7 +35,7 @@ const Projects = () => {
         >
           Projects
         </motion.h1>
-        <div className="flex justify-between w-full overflow-auto  overscroll-y-auto overscroll-x-none md:flex-wrap md:w-[80%] md:mx-auto pt-36">
+        <div className="flex justify-between w-full px-5 overflow-auto  overscroll-y-auto overscroll-x-none md:flex-wrap md:w-[80%] md:mx-auto pt-36">
           {projects.map((element) => (
             <ProjectCard project={element} />
           ))}

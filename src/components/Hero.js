@@ -123,24 +123,6 @@ const Hero = () => {
             </motion.a>
           </motion.div>
         </div>
-        {/* <a className="cursor-pointer">
-          <motion.img
-            animate={{
-              // scale: [1, 0.8, 1.3, 1],
-              rotate: [0, -5, 5, 0],
-            }}
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-              times: [0, 0.4, 0.7, 1],
-              repeat: Infinity,
-              repeatDelay: 1,
-            }}
-            src={arrowUp}
-            alt="button"
-            className="w-5 md:w-7 mx-auto pt-10 md:pt-20"
-          />
-        </a> */}
       </div>
     </div>
   );
