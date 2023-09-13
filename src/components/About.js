@@ -70,7 +70,7 @@ const About = () => {
             whileInView="show"
             viewport={{ once: true }}
             variants={heroVariants(0.6)}
-            className="w-fit text-base "
+            className="w-fit text-base md:text-lg"
           >
             I find happiness in crafting{" "}
             <span className="font-semibold  bg-[#CAEAE9] p-1">
