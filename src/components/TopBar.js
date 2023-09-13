@@ -15,7 +15,7 @@ function TopBar() {
       initial="hidden"
       animate="show"
       variants={navVariants}
-      className=" flex justify-between items-center px-[45px] md:px-[100px] lg:px-[120px] py-[53px] md:pt-4 sticky top-0 z-50 bg-gradient-to-b from-white to-transparent"
+      className=" flex justify-between items-center px-[45px] md:px-[100px] lg:px-[120px] pt-[30px] pb-[35px]  md:pt-4 sticky top-0 z-50 bg-gradient-to-b via-white from-white to-transparent"
     >
       <nav className="flex justify-between w-full">
         <div>
