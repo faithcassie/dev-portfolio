@@ -9,7 +9,7 @@ const About = () => {
       <motion.div
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         variants={slideIn("right", "tween", 0.5, 1)}
         className="bg-[#FFD1B8] w-full md:w-[90%] h-[90%] absolute rounded-tl-[150px] right-0 shadow-xl"
       />
@@ -17,7 +17,7 @@ const About = () => {
         <motion.img
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           animate={{
             scale: [1, 1.1, 1],
             rotate: [0, -5, 5, 0],
@@ -29,7 +29,7 @@ const About = () => {
               repeatDelay: 3,
             },
           }}
-          variants={slideIn("left", "spring", 0.4, 1)}
+          variants={slideIn("left", "spring", 0.1, 1)}
           src={seaHorse}
           alt="seahorse"
           className="absolute w-[50%] left-36 -bottom-[200px] md:w-[40%] md:-bottom-[250px]  md:left-10 lg:left-[200px] lg:w-[30%] lg:mt-10 "
@@ -46,7 +46,7 @@ const About = () => {
                 duration: 0.8,
               },
             }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={heroVariants(0.4)}
             className="w-fit text-5xl md:text-7xl pb-10"
           >
@@ -55,7 +55,7 @@ const About = () => {
           <motion.p
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={heroVariants(0.5)}
             className="w-fit text-base md:text-lg"
           >
@@ -68,7 +68,7 @@ const About = () => {
           <motion.p
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={heroVariants(0.6)}
             className="w-fit pt-5 text-base "
           >

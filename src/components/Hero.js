@@ -16,7 +16,7 @@ const Hero = () => {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           variants={slideIn("left", "tween", 0.1, 0.5)}
           className="h-[350px] md:mt-[10%] w-[90%]  bg-[#CAEAE9] absolute inset-y-0 left-0 rounded-tr-[150px] shadow-xl"
         />
@@ -24,7 +24,7 @@ const Hero = () => {
         <motion.img
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           animate={{
             scale: [1, 1.1, 1],
             rotate: [0, -5, 5, 0],

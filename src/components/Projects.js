@@ -10,9 +10,9 @@ const Projects = () => {
       <motion.div
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         variants={slideIn("left", "tween", 0.5, 1)}
-        className="bg-[#F6F6D7] w-full h-full absolute top-28 -z-20 "
+        className="bg-[#F6F6D7] w-full h-full absolute top-28 -z-20"
       />
       <div
         id="projects"
@@ -29,7 +29,7 @@ const Projects = () => {
               duration: 0.8,
             },
           }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           variants={heroVariants(0.2)}
           className="w-full text-5xl md:text-7xl pb-10 absolute flex justify-center"
         >
@@ -44,7 +44,7 @@ const Projects = () => {
           <motion.img
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{
               scale: 1.1,
               rotate: [0, -5, 5, 0],

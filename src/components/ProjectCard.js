@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
     <motion.div
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false }}
+      viewport={{ once: true }}
       variants={heroVariants(0.4)}
       className="w-fit  px-3 py-5 mx-auto"
     >
@@ -26,12 +26,14 @@ const ProjectCard = ({ project }) => {
         {project.name}
       </motion.h2>
       <div className="flex mt-5 text-sm ">
-        <button
-          onClick={() => handleOpenLink(project.demoLink)}
-          className="mr-3"
-        >
-          Demo
-        </button>
+        {project.demoLink !== "" && (
+          <button
+            onClick={() => handleOpenLink(project.demoLink)}
+            className="mr-3"
+          >
+            Demo
+          </button>
+        )}
         <button onClick={() => handleOpenLink(project.githubLink)}>
           Github
         </button>
