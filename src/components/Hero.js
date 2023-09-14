@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <div id="hero" className="relative h-[500px] pt-0 md:pt-24 ">
+    <div className="relative h-[500px] pt-0 md:pt-24 ">
       <div className="h-[400px] mt-14 md:mt-24 ">
         <motion.div
           initial="hidden"

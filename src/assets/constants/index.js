@@ -36,3 +36,22 @@ export const projects = [
     tech: ["javascript", "reactjs", "mui"],
   },
 ];
+
+export const navLinks = [
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+  },
+  {
+    title: "Resume",
+    href: "/resume",
+  },
+  {
+    title: "Get in touch",
+    href: "/contact",
+  },
+];
