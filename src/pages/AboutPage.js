@@ -13,7 +13,7 @@ const AboutPage = () => {
           variants={heroVariants(0.2)}
           src={blossomGoldfish}
           alt="blossom-goldfish"
-          className="w-full md:w-[50%] top-0"
+          className="w-full md:w-[50%] top-0 select-none"
         />
         <div className="w-[90%] h-full md:w-[40%]  pl-10 my-auto">
           <motion.h1
@@ -27,7 +27,7 @@ const AboutPage = () => {
               },
             }}
             variants={heroVariants(0.3)}
-            className="text-5xl md:text-7xl pb-10 w-fit"
+            className="text-5xl md:text-7xl pb-10 w-fit select-none"
           >
             Hello there!
           </motion.h1>

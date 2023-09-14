@@ -11,7 +11,7 @@ const About = () => {
         whileInView="show"
         viewport={{ once: true }}
         variants={slideIn("right", "tween", 0.5, 1)}
-        className="bg-[#FFD1B8] w-full md:w-[90%] h-[90%] absolute rounded-tl-[150px] right-0 shadow-xl"
+        className="bg-[#FFD1B8] w-full md:w-[90%] h-[90%] absolute rounded-tl-[150px] right-0 shadow-customBlue"
       />
       <div className=" flex w-[60%] h-[550px] mx-auto items-center pb-5">
         <motion.img
@@ -32,7 +32,7 @@ const About = () => {
           variants={slideIn("left", "spring", 0.1, 1)}
           src={seaHorse}
           alt="seahorse"
-          className="absolute w-[50%] left-36 -bottom-[200px] md:w-[30%] md:-bottom-[200px]  md:left-10 lg:left-[150px] lg:w-[30%] lg:mt-10 "
+          className="absolute w-[50%] left-36 -bottom-[200px] md:w-[30%] md:-bottom-[200px]  md:left-10 lg:left-[150px] lg:w-[30%] lg:mt-10 select-none"
         />
         <div className="flex flex-col absolute w-[70%] mt-10 md:right-[150px] md:mt-16 md:w-[50%]">
           <motion.h1
@@ -48,7 +48,7 @@ const About = () => {
             }}
             viewport={{ once: true }}
             variants={heroVariants(0.4)}
-            className="w-fit text-5xl md:text-7xl pb-10"
+            className="w-fit text-5xl md:text-7xl pb-10 select-none"
           >
             About me
           </motion.h1>
@@ -57,7 +57,7 @@ const About = () => {
             whileInView="show"
             viewport={{ once: true }}
             variants={heroVariants(0.5)}
-            className="w-full text-base md:text-lg"
+            className="w-full text-base md:text-lg "
           >
             I started out as a graphic design and UI/UX student in college.
             Learning front-end development seemed like a good career move and I
@@ -70,7 +70,7 @@ const About = () => {
             whileInView="show"
             viewport={{ once: true }}
             variants={heroVariants(0.6)}
-            className="w-fit text-base md:text-lg"
+            className="w-fit text-base md:text-lg "
           >
             I find happiness in crafting{" "}
             <span className="font-semibold  bg-[#CAEAE9] p-1">

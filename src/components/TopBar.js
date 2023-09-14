@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 function TopBar() {
   const navigate = useNavigate();
 
+  // {({isActive}) => isActive ? 'text-[var(--primary)] font-semibold' : 'text-black'}
+
   return (
     <motion.div
       initial="hidden"
@@ -27,20 +29,32 @@ function TopBar() {
         <div className="flex items-center">
           <NavLink
             to="/about"
-            className="hidden lg:block mr-[16px] hover:text-[var(--primary)] hover:scale-105 hover:font-medium cursor-pointer"
+            className={({ isActive }) =>
+              isActive
+                ? "hidden lg:block mr-[16px] cursor-pointer font-semibold text-[var(--secondary)]"
+                : "hidden lg:block mr-[16px] hover:text-[var(--primary)] hover:scale-105 hover:font-semibold cursor-pointer"
+            }
           >
             About
           </NavLink>
 
           <NavLink
             to="/projects"
-            className="hidden lg:block mr-[16px] hover:text-[var(--primary)] hover:scale-105 hover:font-medium cursor-pointer"
+            className={({ isActive }) =>
+              isActive
+                ? "hidden lg:block mr-[16px] cursor-pointer font-semibold text-[var(--secondary)]"
+                : "hidden lg:block mr-[16px] hover:text-[var(--primary)] hover:scale-105 hover:font-semibold cursor-pointer"
+            }
           >
             Projects
           </NavLink>
           <NavLink
             to="/resume"
-            className="hidden lg:block mr-[16px] hover:text-[var(--primary)] hover:scale-105 hover:font-medium cursor-pointer"
+            className={({ isActive }) =>
+              isActive
+                ? "hidden lg:block mr-[16px] cursor-pointer font-semibold text-[var(--secondary)]"
+                : "hidden lg:block mr-[16px] hover:text-[var(--primary)] hover:scale-105 hover:font-semibold cursor-pointer"
+            }
           >
             Resume
           </NavLink>

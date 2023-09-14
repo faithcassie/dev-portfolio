@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import MainLayout from "../layout/MainLayout";
 import ContactPage from "../pages/ContactPage";
-import ProjectDetail from "../pages/ProjectDetail";
+import ProjectDetailPage from "../pages/ProjectDetailPage";
 import ResumePage from "../pages/ResumePage";
 import { AnimatePresence } from "framer-motion";
 import ProjectPage from "../pages/ProjectPage";
@@ -18,7 +18,7 @@ export const Router = () => {
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="projects" element={<ProjectPage />} />
-          <Route path="projects/:id" element={<ProjectDetail />} />
+          <Route path="projects/:id" element={<ProjectDetailPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="resume" element={<ResumePage />} />
         </Route>

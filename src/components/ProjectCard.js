@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
         <motion.img
           whileHover={{ scale: 1.1 }}
           src={project.imgUrl}
-          className="object-cover w-[280px] h-[150px] md:w-[400px] md:h-[214px] shadow-custom hover:border-2 hover:border-lime-300 "
+          className="object-cover w-[280px] h-[150px] md:w-[400px] md:h-[214px] shadow-customPink hover:border-2 hover:border-lime-300 "
         />
       </div>
 

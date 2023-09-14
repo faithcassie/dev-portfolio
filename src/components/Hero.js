@@ -18,7 +18,7 @@ const Hero = () => {
           whileInView="show"
           viewport={{ once: true }}
           variants={slideIn("left", "tween", 0.1, 0.5)}
-          className="h-[450px] md:mt-[10%] w-[90%]  bg-[#CAEAE9] absolute inset-y-0 left-0 rounded-tr-[150px] shadow-xl"
+          className="h-[450px] md:mt-[10%] w-[90%]  bg-[#CAEAE9] absolute inset-y-0 left-0 rounded-tr-[150px] shadow-customPink"
         />
 
         <motion.img
@@ -39,7 +39,7 @@ const Hero = () => {
           variants={slideIn("up", "spring", 0.2, 1)}
           src={GoldFish}
           alt="hero_image"
-          className="w-[50%]  md:w-[40%] lg:w-[30%] absolute right-20 md:right-[15%] -bottom-16 md:-bottom-[12rem] "
+          className="w-[50%] md:w-[40%] lg:w-[30%] absolute right-20 md:right-[15%] -bottom-16 md:-bottom-[12rem] select-none"
         />
         <div className="absolute left-10 md:left-[15%] top-12 w-[80%] md:w-[70%] md:mt-[10%] ">
           <motion.h1

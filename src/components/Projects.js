@@ -35,7 +35,7 @@ const Projects = () => {
         >
           Projects
         </motion.h1>
-        <div className="flex justify-between w-full px-5 overflow-auto  overscroll-y-auto overscroll-x-none md:flex-wrap md:w-[80%] md:mx-auto pt-36">
+        <div className="flex justify-between w-full px-5 scrollbar overflow-x-auto overflow-y-hidden md:overflow-hidden overscroll-y-auto overscroll-x-none md:flex-wrap md:w-[80%] md:mx-auto pt-36">
           {projects.map((element) => (
             <ProjectCard project={element} />
           ))}
@@ -53,7 +53,7 @@ const Projects = () => {
               },
             }}
             variants={slideIn("left", "spring", 0.2, 1)}
-            className="w-[60%] mx-auto sm:w-[40%] md:w-[30%] absolute -bottom-[300px] md:-bottom-[400px] z-10"
+            className="select-none w-[60%] mx-auto sm:w-[40%] md:w-[30%] absolute -bottom-[300px] md:-bottom-[400px] z-10"
             src={novelMan}
             alt="thinking-man"
           />
