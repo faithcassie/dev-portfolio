@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./Logo";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import menuIcon from "../assets/images/menu-icon.svg";
+import closeIcon from "../assets/images/closeIcon.svg";
 import { useNavigate } from "react-router-dom";
 
 function TopBar() {
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
 
-  // {({isActive}) => isActive ? 'text-[var(--primary)] font-semibold' : 'text-black'}
+  const toggleMenu = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+
+  const hamMenuVars = {
+    initial: {
+      scaleY: 0,
+    },
+    animate: {
+      scaleY: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    },
+    exit: {
+      scaleY: 0,
+      transition: {
+        duration: 1,
+        ease: [0.12, 0, 0.4, 0],
+      },
+    },
+  };
 
   return (
     <motion.div
@@ -61,9 +85,25 @@ function TopBar() {
 
           <button onClick={() => navigate("/contact")}>Get in touch</button>
 
-          <div className="block lg:hidden pl-4">
-            <img src={menuIcon} sizes="20px" />
+          <div onClick={toggleMenu} className="block lg:hidden pl-4">
+            <img src={menuIcon} className="w-5 h-5" />
           </div>
+          {open && (
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={hamMenuVars}
+              className="fixed left-0 top-0 h-screen w-full  bg-pink-200 origin-top"
+            >
+              <div
+                onClick={toggleMenu}
+                className="fixed lg:hidden right-12 top-9"
+              >
+                <img src={closeIcon} className="w-5 h-5" />
+              </div>
+            </motion.div>
+          )}
         </div>
       </nav>
     </motion.div>
