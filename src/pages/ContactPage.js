@@ -5,15 +5,10 @@ import seaHorse from "../assets/images/seashorse@3x.png";
 
 const ContactPage = () => {
   const { scrollYProgress } = useScroll();
-  const x1 = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.5, 0.7, 1],
-    [0, -50, -100, -300, -400],
-    {
-      // ease: cubicBezier(0.17, 0.67, 0.83, 0.67),
-      ease: circOut,
-    }
-  );
+  const x1 = useTransform(scrollYProgress, [0, 1], [0, -400], {
+    // ease: cubicBezier(0.17, 0.67, 0.83, 0.67),
+    ease: circOut,
+  });
   const x2 = useTransform(scrollYProgress, [0, 1], [0, -100], {
     ease: circOut,
   });
@@ -34,7 +29,7 @@ const ContactPage = () => {
   });
 
   return (
-    <div className="relative h-full w-full my-36">
+    <div className="relative h-full w-full my-36 overflow-hidden">
       <motion.div initial="hidden" animate="show" variants={heroVariants(0.3)}>
         <img src={seaHorse} alt="seaHorse" className=" mx-auto w-60 h-auto" />
       </motion.div>
@@ -64,7 +59,7 @@ const ContactPage = () => {
           </motion.h1>
         </motion.div>
 
-        <div className="w-full h-[500px] flex flex-col pt-[5rem] pb-[5rem]">
+        <div className="w-full h-full flex flex-col pt-[5rem] pb-[15rem]">
           <form>
             <div className="w-[80%] md:w-[50%] h-full mx-auto flex flex-col">
               <motion.div
@@ -79,7 +74,7 @@ const ContactPage = () => {
                   name="name"
                   placeholder="Your name"
                   required
-                  className="w-full md:w-[300px] mr-5 p-2 bg-slate-100/75 mix-blend-multiply focus:outline-none"
+                  className="w-full md:w-[300px] mr-5 p-2 mb-5 bg-slate-100/75 mix-blend-multiply focus:outline-none"
                 />
 
                 <input
@@ -88,7 +83,7 @@ const ContactPage = () => {
                   name="email"
                   placeholder="Your email"
                   required
-                  className="w-full p-2 bg-slate-100/75 mix-blend-multiply focus:outline-none"
+                  className="w-full p-2 mb-5 bg-slate-100/75 mix-blend-multiply focus:outline-none"
                 />
               </motion.div>
 
@@ -102,15 +97,14 @@ const ContactPage = () => {
                 placeholder="Leave your message here! ☺"
                 rows="4"
                 required
-                className="w-full mt-5 p-2 bg-slate-100/75 mix-blend-multiply focus:outline-none"
+                className="w-full mb-5 p-2 bg-slate-100/75 mix-blend-multiply focus:outline-none"
               />
               <motion.div
                 initial="hidden"
                 animate="show"
                 variants={heroVariants(0.7)}
-                className="mt-6 "
               >
-                <button>Submit</button>
+                <button className="my-2">Submit</button>
                 <button className="bg-transparent text-black">Cancel</button>
               </motion.div>
             </div>
