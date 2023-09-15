@@ -7,18 +7,12 @@ const ContactPage = () => {
   const x1 = useTransform(
     scrollYProgress,
     [0, 0.3, 0.5, 0.7, 1],
-    [0, -50, -100, -200, -400]
-    //   {
-    //   transition: {
-    //     duration: 2,
-    //     ease: [0.165, 0.84, 0.39, 1],
-    //   },
-    // }
+    [0, -50, -100, -300, -400]
   );
 
   return (
-    <div className="h-full my-36">
-      <div className="mt-22">
+    <div className="h-full mt-36">
+      <div className="pt-36">
         <motion.div
           initial="hidden"
           animate="show"
@@ -26,13 +20,13 @@ const ContactPage = () => {
         >
           <motion.h1
             style={{ x: x1 }}
-            className=" text-[6rem] md:text-[11rem] px-1 font-thin whitespace-nowrap "
+            className=" text-[5rem] md:text-[10rem] px-1 font-thin whitespace-nowrap "
           >
             Send me a message!
           </motion.h1>
         </motion.div>
 
-        <div className="w-full h-[500px] flex flex-col py-36">
+        <div className="w-full h-[500px] flex flex-col pt-[5rem] pb-[5rem]">
           <form>
             <div className="w-[80%] md:w-[50%] h-full mx-auto flex flex-col">
               <motion.div

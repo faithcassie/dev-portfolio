@@ -50,7 +50,7 @@ function TopBar() {
     },
     animate: {
       transition: {
-        delayChildren: 0.2,
+        delayChildren: 0.1,
         staggerChildren: 0.09,
         staggerDirection: 1,
       },
