@@ -11,7 +11,7 @@ const About = () => {
         whileInView="show"
         viewport={{ once: true }}
         variants={slideIn("right", "tween", 0.5, 1)}
-        className="bg-[#FFD1B8] w-full md:w-[90%] h-[90%] absolute rounded-tl-[150px] right-0 shadow-customBlue"
+        className="bg-[#FFD1B8] opacity-40 backdrop-blur-sm w-full md:w-[90%] h-[90%] absolute rounded-tl-[150px] right-0 shadow-customBlue"
       />
       <div className=" flex w-[60%] h-[550px] mx-auto items-center pb-5">
         <motion.img

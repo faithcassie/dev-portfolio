@@ -12,7 +12,7 @@ const Projects = () => {
         whileInView="show"
         viewport={{ once: true }}
         variants={slideIn("left", "tween", 0.5, 1)}
-        className="bg-[#F6F6D7] w-full h-full absolute top-28 -z-20"
+        className="bg-[#F6F6D7]/70 w-full h-full absolute top-28 -z-20"
       />
       <div
         id="projects"

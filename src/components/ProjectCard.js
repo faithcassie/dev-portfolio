@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
           Github
         </button>
       </div>
-      <p className="pt-3 w-[300px] md:w-[400px] text-base">
+      <p className="pt-3 w-[300px]  md:w-[400px] text-base ">
         {project.description}
       </p>
 

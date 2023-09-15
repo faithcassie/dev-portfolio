@@ -35,7 +35,7 @@ const ContactPage = () => {
       </motion.div>
       <motion.div
         style={{ x: x2, y: y2 }}
-        className="absolute top-3 right-5 bg-purple-300 w-72 h-72 rounded-full blur-xl opacity-30 -z-10 mix-blend-multiply "
+        className="absolute top-3 right-5 m-10 bg-purple-300 w-72 h-72 rounded-full blur-xl opacity-30 -z-10 mix-blend-multiply "
       ></motion.div>
       <motion.div
         style={{ x: x3, y: y3 }}

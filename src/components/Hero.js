@@ -9,7 +9,7 @@ const Hero = () => {
   const handleOpenLink = (link) => {
     window.open(link, "_blank");
   };
-
+  // bg-[#CAEAE9]
   return (
     <div className="relative h-[500px] pt-0 md:pt-24 ">
       <div className="h-[400px] mt-14 md:mt-24 ">
@@ -18,7 +18,7 @@ const Hero = () => {
           whileInView="show"
           viewport={{ once: true }}
           variants={slideIn("left", "tween", 0.1, 0.5)}
-          className="h-[450px] md:mt-[10%] w-[90%]  bg-[#CAEAE9] absolute inset-y-0 left-0 rounded-tr-[150px] shadow-customPink"
+          className="h-[450px] md:mt-[10%] w-[90%]  bg-[#CAEAE9]/50 absolute inset-y-0 left-0 rounded-tr-[150px] shadow-customPink "
         />
 
         <motion.img
