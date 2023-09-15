@@ -14,19 +14,19 @@ const ContactPage = () => {
       ease: circOut,
     }
   );
-  const x2 = useTransform(scrollYProgress, [0, 1], [0, -500], {
+  const x2 = useTransform(scrollYProgress, [0, 1], [0, -100], {
     ease: circOut,
   });
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 600], {
     ease: circOut,
   });
-  const x3 = useTransform(scrollYProgress, [0, 1], [0, 500], {
+  const x3 = useTransform(scrollYProgress, [0, 1], [0, 200], {
     ease: circOut,
   });
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -500], {
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, -300], {
     ease: circOut,
   });
-  const x4 = useTransform(scrollYProgress, [0, 1], [0, -500], {
+  const x4 = useTransform(scrollYProgress, [0, 1], [0, -200], {
     ease: circOut,
   });
   const y4 = useTransform(scrollYProgress, [0, 1], [0, -500], {
@@ -40,7 +40,7 @@ const ContactPage = () => {
       </motion.div>
       <motion.div
         style={{ x: x2, y: y2 }}
-        className="absolute top-3 right-5 bg-purple-300 w-72 h-72 rounded-full blur-xl opacity-30 -z-10 mix-blend-multiply overflow-hidden"
+        className="absolute top-3 right-5 bg-purple-300 w-72 h-72 rounded-full blur-xl opacity-30 -z-10 mix-blend-multiply "
       ></motion.div>
       <motion.div
         style={{ x: x3, y: y3 }}
