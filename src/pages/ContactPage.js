@@ -17,7 +17,7 @@ const ContactPage = () => {
   const x2 = useTransform(scrollYProgress, [0, 1], [0, -500], {
     ease: circOut,
   });
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, 900], {
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 600], {
     ease: circOut,
   });
   const x3 = useTransform(scrollYProgress, [0, 1], [0, 500], {
@@ -34,13 +34,13 @@ const ContactPage = () => {
   });
 
   return (
-    <div className="relative h-full w-full mt-36">
+    <div className="relative h-full w-full my-36">
       <motion.div initial="hidden" animate="show" variants={heroVariants(0.3)}>
         <img src={seaHorse} alt="seaHorse" className=" mx-auto w-60 h-auto" />
       </motion.div>
       <motion.div
         style={{ x: x2, y: y2 }}
-        className="absolute top-3 right-5 bg-purple-300 w-72 h-72 rounded-full blur-xl opacity-30 -z-10 mix-blend-multiply"
+        className="absolute top-3 right-5 bg-purple-300 w-72 h-72 rounded-full blur-xl opacity-30 -z-10 mix-blend-multiply overflow-hidden"
       ></motion.div>
       <motion.div
         style={{ x: x3, y: y3 }}
@@ -58,7 +58,7 @@ const ContactPage = () => {
         >
           <motion.h1
             style={{ x: x1 }}
-            className=" text-[6rem] md:text-[10rem] px-1 font-thin whitespace-nowrap "
+            className=" text-[5rem] md:text-[10rem] px-1 font-thin whitespace-nowrap "
           >
             Send me a message!
           </motion.h1>
