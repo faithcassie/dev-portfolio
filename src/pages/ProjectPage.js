@@ -15,7 +15,6 @@ const ProjectPage = () => {
         initial="hidden"
         whileInView="show"
         whileHover={{
-          scale: 1.1,
           rotate: [0, -5, 5, 0],
           transformOrigin: "center",
           transition: {
@@ -24,7 +23,7 @@ const ProjectPage = () => {
         }}
         viewport={{ once: true }}
         variants={heroVariants(0.2)}
-        className="w-full text-4xl md:text-7xl flex justify-center"
+        className="w-fit mx-auto text-4xl md:text-7xl flex justify-center"
       >
         Projects
       </motion.h1>
