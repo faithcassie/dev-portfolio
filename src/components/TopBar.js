@@ -93,16 +93,13 @@ function TopBar() {
           >
             Projects
           </NavLink>
-          <NavLink
-            to="/resume"
-            className={({ isActive }) =>
-              isActive
-                ? "hidden lg:block mr-[16px] cursor-pointer font-semibold text-[var(--secondary)]"
-                : "hidden lg:block mr-[16px] hover:text-[var(--primary)] hover:scale-105 hover:font-semibold cursor-pointer"
-            }
+          <a
+            href="/resume-faith-2023.pdf"
+            download
+            className="hidden lg:block mr-[16px] cursor-pointer  hover:text-[var(--primary)] hover:scale-105 hover:font-semibold"
           >
             Resume
-          </NavLink>
+          </a>
 
           <button onClick={() => navigate("/contact")}>Get in touch</button>
 
@@ -142,6 +139,16 @@ function TopBar() {
                       </div>
                     );
                   })}
+                  <div className="overflow-hidden">
+                    <motion.div
+                      variants={mobileLinkVars}
+                      className="text-2xl lowercase pb-3 "
+                    >
+                      <a href="/resume-faith-2023.pdf" download>
+                        Resume
+                      </a>
+                    </motion.div>
+                  </div>
                   <div className="overflow-hidden">
                     <motion.div
                       variants={mobileLinkVars}
