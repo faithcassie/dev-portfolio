@@ -1,7 +1,7 @@
 import React from "react";
 import { circOut, motion, useScroll, useTransform } from "framer-motion";
 import { heroVariants } from "../utils/motion";
-import seaHorse from "../assets/images/seashorse@3x.png";
+import seaHorse from "../assets/images/seahorse.png";
 
 const ContactPage = () => {
   const { scrollYProgress } = useScroll();
@@ -30,8 +30,21 @@ const ContactPage = () => {
 
   return (
     <div className="relative h-full w-full my-36 overflow-hidden">
-      <motion.div initial="hidden" animate="show" variants={heroVariants(0.3)}>
-        <img src={seaHorse} alt="seaHorse" className=" mx-auto w-60 h-auto" />
+      <motion.div
+        initial="hidden"
+        animate="show"
+        variants={heroVariants(0.3)}
+        className="m-5"
+      >
+        <motion.img
+          whileHover={{
+            scale: [1, 1.1, 1],
+            rotate: [0, -5, 5, 0],
+          }}
+          src={seaHorse}
+          alt="seaHorse"
+          className=" mx-auto  w-60 h-auto"
+        />
       </motion.div>
       <motion.div
         style={{ x: x2, y: y2 }}

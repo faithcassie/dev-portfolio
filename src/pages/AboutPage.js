@@ -1,5 +1,5 @@
 import React from "react";
-import blossomGoldfish from "../assets/images/goldfish-blossoms.png";
+import blossomGoldfish from "../assets/images/light-goldfish-blossom.png";
 import { motion } from "framer-motion";
 import { navVariants, heroVariants, slideIn } from "../utils/motion";
 

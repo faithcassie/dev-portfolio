@@ -1,5 +1,5 @@
 import React from "react";
-import seaHorse from "../assets/images/seashorse@3x.png";
+import seaHorse from "../assets/images/seahorse.png";
 import { motion } from "framer-motion";
 import { heroVariants, slideIn } from "../utils/motion";
 
