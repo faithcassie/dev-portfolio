@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { heroVariants } from "../utils/motion";
 import { Link, useNavigate } from "react-router-dom";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ key, project }) => {
+  const navigate = useNavigate();
   const handleOpenLink = (link) => {
     window.open(link, "_blank");
   };
@@ -17,15 +18,18 @@ const ProjectCard = ({ project }) => {
     >
       <div className="pb-2">
         <motion.img
+          onClick={() => navigate(`/projects/${project.name}`)}
           whileHover={{ scale: 1.1 }}
           src={project.imgUrl}
-          className="object-cover w-[280px] h-[150px] md:w-[400px] md:h-[214px] shadow-customPink hover:border-2 hover:border-lime-300 "
+          className="object-cover w-[280px] md:w-[400px] h-auto aspect-video shadow-customPink hover:border-2 hover:border-lime-300 "
         />
       </div>
+      <Link to={`/projects/${project.name}`}>
+        <motion.h2 whileHover={{ scale: 1.1 }} className="text-3xl pt-5 w-fit">
+          {project.name}
+        </motion.h2>
+      </Link>
 
-      <motion.h2 whileHover={{ scale: 1.1 }} className="text-3xl pt-5 w-fit">
-        {project.name}
-      </motion.h2>
       <div className="flex mt-5 text-sm ">
         {project.demoLink !== "" && (
           <button

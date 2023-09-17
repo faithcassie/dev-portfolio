@@ -29,7 +29,7 @@ const ContactPage = () => {
   };
 
   const { scrollYProgress } = useScroll();
-  const x1 = useTransform(scrollYProgress, [0, 1], [0, -300], {
+  const x1 = useTransform(scrollYProgress, [0, 1], [0, -400], {
     ease: circOut,
   });
   const x2 = useTransform(scrollYProgress, [0, 1], [0, -100], {
@@ -90,7 +90,7 @@ const ContactPage = () => {
           {!isSubmitted ? (
             <motion.h1
               style={{ x: x1 }}
-              className=" text-[4rem] md:text-[9rem] px-1 font-thin whitespace-nowrap pt-28 w-fit"
+              className=" text-[4rem] md:text-[9rem] px-1 font-thin whitespace-nowrap  w-fit"
             >
               Send me a message! 📮
             </motion.h1>

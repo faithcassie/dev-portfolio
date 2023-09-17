@@ -216,7 +216,14 @@ const mobileLinkVars = {
 const MobileLink = ({ title, href }) => {
   return (
     <motion.div variants={mobileLinkVars} className="text-2xl lowercase pb-3 ">
-      <NavLink to={href}>{title}</NavLink>
+      <NavLink
+        to={href}
+        className={({ isActive }) =>
+          isActive ? " text-[var(--secondary)]" : ""
+        }
+      >
+        {title}
+      </NavLink>
     </motion.div>
   );
 };

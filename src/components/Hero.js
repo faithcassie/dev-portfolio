@@ -39,7 +39,7 @@ const Hero = () => {
           variants={slideIn("up", "spring", 0.2, 1)}
           src={GoldFish}
           alt="hero_image"
-          className="w-[50%] md:w-[40%] lg:w-[30%] absolute right-20 md:right-[15%] -bottom-16 md:-bottom-[12rem] select-none m-5 z-10"
+          className="w-[50%] md:w-[40%] lg:w-[30%] absolute right-20 md:right-[15%] -bottom-16 md:-bottom-[16rem] select-none m-5 z-10"
         />
         <div className="absolute left-10 md:left-[15%] top-12 w-[80%] md:w-[70%] md:mt-[10%] ">
           <motion.h1
