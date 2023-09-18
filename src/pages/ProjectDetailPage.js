@@ -15,7 +15,7 @@ const ProjectDetail = () => {
           variants={heroVariants(0.2)}
           initial="hidden"
           animate="show"
-          className="md:text-7xl mx-auto py-10 my-10 w-fit "
+          className="text-4xl md:text-7xl mx-auto py-10 md:my-20 w-fit "
         >
           {project.name}
         </motion.div>
@@ -23,19 +23,19 @@ const ProjectDetail = () => {
           variants={heroVariants(0.3)}
           initial="hidden"
           animate="show"
-          className="w-fit flex justify-between mx-auto my-5"
+          className="w-fit flex flex-row justify-between mx-auto my-5"
         >
           {project.demoLink && (
             <button
               onClick={() => (window.open(project.demoLink), "_blank")}
-              className="mx-3"
+              className="m-2"
             >
               Demo
             </button>
           )}
           <button
             onClick={() => (window.open(project.githubLink), "_blank")}
-            className="mx-3"
+            className="m-2"
           >
             Github
           </button>
@@ -44,7 +44,7 @@ const ProjectDetail = () => {
           variants={heroVariants(0.4)}
           initial="hidden"
           animate="show"
-          className="w-[80%] text-2xl text-slate-800 p-3 mx-auto"
+          className="w-full md:w-[90%] text-base md:text-2xl text-slate-800 mx-auto my-3"
         >
           {project.description}
         </motion.div>
@@ -52,12 +52,12 @@ const ProjectDetail = () => {
           variants={heroVariants(0.5)}
           initial="hidden"
           animate="show"
-          className="w-fit mx-auto mb-5"
+          className="w-fit mx-auto my-5"
         >
           {project.tech.map((e) => (
             <motion.div
               whileHover={{ scale: 1.1 }}
-              className="inline-block border border-black text-black px-2 py-1 rounded-full text-xs mr-2 mt-1"
+              className="inline-block border border-black text-black px-2 py-1 rounded-full text-xs md:text-base mr-2 mt-1"
             >
               {e}
             </motion.div>
