@@ -1,7 +1,7 @@
 import React from "react";
 import blossomGoldfish from "../assets/images/light-goldfish-blossom.png";
 import { motion } from "framer-motion";
-import { navVariants, heroVariants, slideIn } from "../utils/motion";
+import { heroVariants } from "../utils/motion";
 
 const AboutPage = () => {
   return (

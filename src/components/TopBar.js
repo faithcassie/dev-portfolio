@@ -93,18 +93,21 @@ function TopBar() {
           >
             Projects
           </NavLink>
-          <a
-            href="/resume-faith-2023.pdf"
-            download
+          <div
+            onClick={() =>
+              handleOpenLink(
+                "https://drive.google.com/file/d/1zwgaokUDkWqavL2lydEKYnDtjncAUwzO/view?usp=sharing"
+              )
+            }
             className="hidden lg:block mr-[16px] cursor-pointer  hover:text-[var(--primary)] hover:scale-105 hover:font-semibold"
           >
             Resume
-          </a>
+          </div>
 
           <button onClick={() => navigate("/contact")}>Get in touch</button>
 
           <div onClick={toggleMenu} className="block lg:hidden pl-4">
-            <img src={menuIcon} className="w-5 h-5" />
+            <img src={menuIcon} alt="menu-icon" className="w-5 h-5" />
           </div>
           <AnimatePresence>
             {open && (
@@ -119,7 +122,7 @@ function TopBar() {
                   onClick={toggleMenu}
                   className="fixed lg:hidden right-12 top-9"
                 >
-                  <img src={closeIcon} className="w-5 h-5" />
+                  <img src={closeIcon} alt="close-icon" className="w-5 h-5" />
                 </div>
                 <motion.div
                   variants={containerVars}
@@ -144,9 +147,15 @@ function TopBar() {
                       variants={mobileLinkVars}
                       className="text-2xl lowercase pb-3 "
                     >
-                      <a href="/resume-faith-2023.pdf" download>
+                      <div
+                        onClick={() =>
+                          handleOpenLink(
+                            "https://drive.google.com/file/d/1zwgaokUDkWqavL2lydEKYnDtjncAUwzO/view?usp=sharing"
+                          )
+                        }
+                      >
                         Resume
-                      </a>
+                      </div>
                     </motion.div>
                   </div>
                   <div className="overflow-hidden">
