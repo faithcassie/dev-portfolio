@@ -49,7 +49,7 @@ const AboutPage = () => {
             variants={heroVariants(0.5)}
           >
             During my college years, I discovered the beauty of web development
-            that completed my desire of transforming ideas into real world
+            which completed my desire to transform ideas into real-world
             products. So, I decided to{" "}
             <span className=" text-[var(--primary)] font-semibold">
               switch my career path
@@ -61,8 +61,8 @@ const AboutPage = () => {
             animate="show"
             variants={heroVariants(0.6)}
           >
-            It brings joy and sense of fulfillment to me when collaborating with
-            others to craft{" "}
+            It brings joy and a sense of fulfillment to me when collaborating
+            with others to craft{" "}
             <span className=" text-[var(--primary)] font-semibold">
               beautiful and engaging experiences
             </span>{" "}
