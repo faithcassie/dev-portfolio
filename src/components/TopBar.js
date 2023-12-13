@@ -150,7 +150,7 @@ function TopBar() {
                       <div
                         onClick={() =>
                           handleOpenLink(
-                            "https://drive.google.com/file/d/1zwgaokUDkWqavL2lydEKYnDtjncAUwzO/view?usp=sharing"
+                            "https://docs.google.com/document/d/1Npai72CCgqncNtPJypcC-rJvKftRsmZ2pS1hQVLL7dg/edit?usp=sharing"
                           )
                         }
                       >
